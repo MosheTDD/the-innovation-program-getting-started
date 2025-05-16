@@ -75,7 +75,7 @@ export default function App() {
               </Group>
 
               <Paper withBorder p='lg' radius='md' bg='gray.0'>
-                <ScrollArea h={90}>
+                <ScrollArea h={90} offsetScrollbars>
                   <Text size='md' lh={1.6}>
                     {INSTALLATION_STEPS[active].description}
                   </Text>
