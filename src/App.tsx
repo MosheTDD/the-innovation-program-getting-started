@@ -5,6 +5,7 @@ import {
   Group,
   Paper,
   Progress,
+  ScrollArea,
   Stack,
   Text,
   ThemeIcon,
@@ -22,15 +23,7 @@ export default function App() {
   const progress = Math.round((active / INSTALLATION_STEPS.length) * 100);
 
   return (
-    <Stack
-      py={10}
-      px={20}
-      justify='start'
-      align='center'
-      w='100dvw'
-      bg='gray.0'
-      mih={'100dvh'}
-    >
+    <Stack py={10} px={20} justify='start' align='center' bg='gray.0'>
       <div
         id='google_translate_element'
         style={{
@@ -45,15 +38,18 @@ export default function App() {
         w={{ base: '100%', md: '30rem' }}
         justify='center'
         h='100%'
-        gap='xl'
+        gap='xs'
       >
-        <Header />
-        <Progress
-          value={progress}
-          size='md'
-          radius='xl'
-          color={active === INSTALLATION_STEPS.length ? 'green' : 'blue'}
-        />
+        <Group>
+          <Header />
+          <Progress
+            w={'100%'}
+            value={progress}
+            size='md'
+            radius='xl'
+            color={active === INSTALLATION_STEPS.length ? 'green' : 'blue'}
+          />
+        </Group>
 
         <Card shadow='md' radius='lg' p='xl' withBorder style={{ flex: 1 }}>
           {active < INSTALLATION_STEPS.length ? (
@@ -79,9 +75,11 @@ export default function App() {
               </Group>
 
               <Paper withBorder p='lg' radius='md' bg='gray.0'>
-                <Text size='md' lh={1.6}>
-                  {INSTALLATION_STEPS[active].description}
-                </Text>
+                <ScrollArea h={90}>
+                  <Text size='md' lh={1.6}>
+                    {INSTALLATION_STEPS[active].description}
+                  </Text>
+                </ScrollArea>
               </Paper>
 
               <Button
