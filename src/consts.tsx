@@ -1,4 +1,11 @@
-import { FaPython, FaCode, FaGitAlt, FaDiscord, FaRobot } from 'react-icons/fa';
+import {
+  FaPython,
+  FaCode,
+  FaGitAlt,
+  FaDiscord,
+  FaRobot,
+  FaGithub,
+} from 'react-icons/fa';
 
 export const INSTALLATION_STEPS = [
   {
@@ -33,7 +40,14 @@ export const INSTALLATION_STEPS = [
     buttonText: 'Install Git',
     buttonLink: 'https://git-scm.com/downloads',
   },
-
+  {
+    label: 'GitHub',
+    description: `GitHub is where we host our code, track issues, and collaborate on open-source projects. It's essential for contributing and staying up-to-date.`,
+    icon: <FaGithub size={20} />,
+    color: 'gray',
+    buttonText: 'Visit GitHub',
+    buttonLink: 'https://github.com/',
+  },
   {
     label: 'OpenAI Account (ChatGPT)',
     description: `ChatGPT is your 24/7 programming assistant. You can ask it for code help, explanations, or project ideas — like a super tutor.`,
