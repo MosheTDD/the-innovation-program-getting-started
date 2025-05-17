@@ -45,8 +45,8 @@ export const INSTALLATION_STEPS = [
     description: `GitHub is where we host our code, track issues, and collaborate on open-source projects. It's essential for contributing and staying up-to-date.`,
     icon: <FaGithub size={20} />,
     color: 'gray',
-    buttonText: 'Visit GitHub',
-    buttonLink: 'https://github.com/',
+    buttonText: 'Create GitHub Account',
+    buttonLink: 'https://github.com/signup',
   },
   {
     label: 'OpenAI Account (ChatGPT)',
